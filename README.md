@@ -1,4 +1,13 @@
 # Turismo_De_Aventura
+
+| Empresa / Organización   |  AMDL SOFTWARE & TECNOLOGY |
+| ------------ | ------------ |
+| Proyecto   |  Turismo de Aventura  |
+| Fecha de preparación  | 05/06/2023  |
+| Cliente  |   |
+| Patrocinador Oficial  |   |
+| Gerente / Líder de Proyecto  | Daniela Álvarez Ramírez  |
+
 ## Proposito
 Turismo de Aventura
 Dicho documento cuenta con las especificaciones necesarias para el desarrollo 
