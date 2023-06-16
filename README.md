@@ -1,5 +1,6 @@
 # Turismo_De_Aventura
 
+## Información del Proyecto
 | Empresa / Organización   |  AMDL SOFTWARE & TECNOLOGY |
 | ------------ | ------------ |
 | Proyecto   |  Turismo de Aventura  |
@@ -7,6 +8,14 @@
 | Cliente  |   |
 | Patrocinador Oficial  |   |
 | Gerente / Líder de Proyecto  | Daniela Álvarez Ramírez  |
+
+## Aprobaciones
+| Nombre y Apellido  | Cargo  | Departamento u Organización  | Fecha  |Firma   |
+| ------------ | ------------ | ------------ | ------------ | ------------ |
+| Daniela Álvarez Ramírez  |  Líder/DB Manager | AMDL SOFTWARE & TECNOLOGY | 05/06/2023  |   |
+|  Alfredo Solis Sánchez | Analista  | AMDL SOFTWARE & TECNOLOGY  | 05/06/2023  |   |
+|  Lesly Yareth Hernández Bonilla  | Frontend   | AMDL SOFTWARE & TECNOLOGY  |  05/06/2023 |   |
+| Marco Antonio Rosas González  | Backend  |  AMDL SOFTWARE & TECNOLOGY | 05/06/2023  |   |
 
 ## Proposito
 Turismo de Aventura
