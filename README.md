@@ -9,6 +9,8 @@
 | Patrocinador Oficial  |   |
 | Gerente / Líder de Proyecto  | Daniela Álvarez Ramírez  |
 
+
+
 ## Aprobaciones
 | Nombre y Apellido  | Cargo  | Departamento u Organización  | Fecha  |Firma   |
 | ------------ | ------------ | ------------ | ------------ | ------------ |
