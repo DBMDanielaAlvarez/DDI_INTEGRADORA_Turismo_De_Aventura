@@ -1,3 +1,5 @@
+#Logos aqui
+ 
  # Turismo_De_Aventura
 
 ## Información del Proyecto
@@ -20,6 +22,7 @@
 | Marco Antonio Rosas González  | Backend  |  AMDL SOFTWARE & TECNOLOGY | 05/06/2023  |   |
 
 ## Proposito
+
 Turismo de Aventura
 Dicho documento cuenta con las especificaciones necesarias para el desarrollo 
 del software “Turismo de Aventura” comprendiendo las siguientes partes del 
