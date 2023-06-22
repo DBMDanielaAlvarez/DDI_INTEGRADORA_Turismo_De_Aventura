@@ -58,3 +58,6 @@ para mejor experiencia.
 5. GPS. Se obtienen las indicaciones del lugar seleccionado, dando las 
 indicaciones necesarias y el servicio de maps.
 
+## Requerimientos Funcionales
+## Requerimientos No Funcionales
+## Reglas de Negocio
