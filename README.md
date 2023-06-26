@@ -15,8 +15,8 @@
 | ------------ | ------------ |
 | Proyecto   |  Turismo de Aventura  |
 | Fecha de preparación  | 05/06/2023  |
-| Cliente  |   |
-| Patrocinador Oficial  |   |
+| Cliente  |  MTI. Marco Antonio Ramirez |
+| Patrocinador Oficial  | MTI. Marco Antonio Ramirez  |
 | Gerente / Líder de Proyecto  | Daniela Álvarez Ramírez  |
 
 &nbsp;
