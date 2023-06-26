@@ -76,7 +76,24 @@ Dichas funcionalidades del producto favorecen al usuario para una mejor experien
 &nbsp;
 ### Requerimientos No Funcionales
 
+1. El sistema deberá ser capaz de contener la información necesaria y disponible cuando el usuario interactúe con la misma. 
+2. Toda funcionalidad del sistema deberá ser optimizada para una buena experiencia. 
+3. Los datos de puntuación hacia los pueblos mágicos deberán ser optimizados y guardados para futuros cambios al sistema. 
+4. El sistema contara con un respaldo para la información almacenada. 
+5. La usabilidad para el usuario deberá ser agradable para el mismo.
+6. El sistema debe poseer interfaces graficas bien diseñadas. 
+7. El tiempo para iniciar el sistema deberá ser optimo. 
+8. La probabilidad de fallo del sistema deberá ser mínima. 
+9. La aplicación deberá ser compatible con diferentes versiones.
+10. La memoria RAM ocupada para la aplicación deberá ser considerable bajo ciertas condiciones.
+11. La interfaz del usuario será implementada para adaptarse a diferentes dispositivos.
+
 &nbsp;
 ### Reglas de Negocio
+
+1. Para  poder visualizar los pueblos magicos, el usuario debera presionar el boton el cual lo dirije a las siguientes pantallas.
+2. Para  poder visualizar los lugares turisticos de los diferentes pueblos magicos, el usuario debera presionar el boton el cual lo dirije a las siguientes pantallas.
+3. Solo si el usuario cumple con ciertas condiciones, el sistema obtendra uan respuesta satisfactoria.
+4. El aplicativo podra ser instalado en diferentes dispositivos, obteniendo una compatibilidad. 
 
 
