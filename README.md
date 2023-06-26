@@ -1,4 +1,6 @@
-#Logos aqui
+
+![Aquí la descripción de la imagen por si no carga]
+(https://raw.githubusercontent.com/parzibyte/WaterPy/master/assets/ImagenV1.png)
  
  # Turismo_De_Aventura
 
@@ -11,9 +13,13 @@
 | Patrocinador Oficial  |   |
 | Gerente / Líder de Proyecto  | Daniela Álvarez Ramírez  |
 
+## Historial de Versiones
+| Fecha  | Versión  | Autor  | Organización  |Descripción   |
+| ------------ | ------------ | ------------ | ------------ | ------------ |
+| 05/06/2023  |1.0|  Alfredo Solis Sanchez | AMDL SOFTWARE & TECNOLOGY | Primera Versión  |   
 
 
-## Aprobaciones
+## Responsables
 | Nombre y Apellido  | Cargo  | Departamento u Organización  | Fecha  |Firma   |
 | ------------ | ------------ | ------------ | ------------ | ------------ |
 | Daniela Álvarez Ramírez  |  Líder/DB Manager | AMDL SOFTWARE & TECNOLOGY | 05/06/2023  |   |
@@ -59,5 +65,13 @@ para mejor experiencia.
 indicaciones necesarias y el servicio de maps.
 
 ## Requerimientos Funcionales
+1. El aplicativo permitirá la visualización de los diferentes pueblos mágicos del estado de Puebla. 
+2. Al seleccionar algún pueblo mágico, la solicitud pasara al siguiente paso de flujo de trabajo de aprobación configurado en el sistema por defecto. 
+3. Dado lo anterior, se mostrará las atracciones turísticas de pueblo mágico seleccionado. 
+4. El sistema permitirá únicamente la visualización de la información deseada. 
+5. Al seleccionar el lugar turístico, se mostrará información relevante del mismo.
+6. 
+7. Se permitirá el registro de una calificación por parte del usuario hacia los diferentes pueblos mágicos y sus atractivos turísticos para cada uno de ellos. 
+
 ## Requerimientos No Funcionales
 ## Reglas de Negocio
