@@ -7,6 +7,9 @@
 ### Organigrama de Equipo de Trabajo
 
 &nbsp;
+[![organigrama.png](https://i.postimg.cc/PryCJW3f/organigrama.png)](https://postimg.cc/mtcL6HWK)
+
+&nbsp;
 ### Información del Proyecto
 | Empresa / Organización   |  AMDL SOFTWARE & TECNOLOGY |
 | ------------ | ------------ |
