@@ -16,8 +16,8 @@
 | Proyecto   |  Turismo de Aventura  |
 | Fecha de preparación  | 05/06/2023  |
 | Cliente  |  MTI. Marco Antonio Ramirez |
-| Patrocinador Oficial  | MTI. Marco Antonio Ramirez  |
-| Gerente / Líder de Proyecto  | Daniela Álvarez Ramírez  |
+| Patrocinador Oficial  | MTI. Marco Antonio Ramirez H.  |
+| Gerente / Líder de Proyecto  | Daniela Álvarez Ramírez H.  |
 
 &nbsp;
 ### Historial de Versiones
@@ -45,7 +45,7 @@ Roles de trabajo para los diferentes representantes, el alcance del mismo, los r
 &nbsp;
 ### Alcance del producto / Software
 <div class=text-justify>
-Realización de una aplicación para Wear OS, implementada para la recomendación de lugares turísticos en cada uno de los diferentes pueblos mágicos del estado de Puebla.
+Realización de una aplicación para Wear OS, implementada para la recomendación de lugares turísticos en cada uno de los diferentes pueblos mágicos del estado de Puebla. </div>
 
 1. Da al usuario el o los lugares turísticos, en el cual el usuario se encuentre. 
 2. Describe el lugar turístico con la información mas relevante
