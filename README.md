@@ -168,7 +168,7 @@ Soporte con dispositivos:
  Base de Datos
   
  #### Interfaces de comunicación
-  &nbsp;
+
   
 
 
