@@ -94,7 +94,14 @@ Dichas funcionalidades del producto favorecen al usuario para una mejor experien
 1. Para  poder visualizar los pueblos magicos, el usuario debera presionar el boton el cual lo dirije a las siguientes pantallas.
 2. Para  poder visualizar los lugares turisticos de los diferentes pueblos magicos, el usuario debera presionar el boton el cual lo dirije a las siguientes pantallas.
 3. Solo si el usuario cumple con ciertas condiciones, el sistema obtendra uan respuesta satisfactoria.
-4. El aplicativo podra ser instalado en diferentes dispositivos, obteniendo una compatibilidad. 
+4. El aplicativo podra ser instalado en diferentes dispositivos, obteniendo una compatibilidad.
+
+&nbsp;
+### Aplicación General y Diagrama de Arquitectura
+[![Aplicaci-n-General.png](https://i.postimg.cc/vTLJQcG0/Aplicaci-n-General.png)](https://postimg.cc/30NS1r4G)
+&nbsp;
+[![Arquitectura-Software.png](https://i.postimg.cc/9XtKwwjp/Arquitectura-Software.png)](https://postimg.cc/Lh5NrX5Y)
+
 
 &nbsp;
 ### Clases y características de usuarios
@@ -126,6 +133,17 @@ Usuario Administrador
 
 &nbsp;
 ### Entorno Operativo
+Entorno de Desarrollo de Software: Android Studio es el entorno de desarrollo integrado oficial para la plataforma Android. 
+
+Sistema Operativo del Aplicativo: El sistema operativo brindara al aplicativo sus herramientas correspondientes. 
+
+WearOs:Dentro de este entorno se desarrollara el aplicativo, ofreciendonos funcionalidades especificas de estos dispositivos. 
+
+Sistema Web:Una Aplicación web consumida a traves de numerosos dispositivos, ofreciendo ventajas a nuestro sistema. 
+
+UI Alexa:El aplicativo consumido bajo esta tecnología interectuara con los diferentes usuarios finales. 
+
+API: El aplicativo consumira FastAPI con sus respectivas funcionalidades.
 
 
 
@@ -158,6 +176,13 @@ Interfaz de descripción del lugar turistico para Wear Os.
 - Se cuenta con el botón de regresar para ir a la pantalla anterior.
 
   &nbsp;
+  
+|  Interfaz de inicio para Wear Os | Interfaz de Pueblo Mágicos para Wear Os  | Interfaz de lugares turísticos para Wear Os  |  Interfaz de descripción del lugar turistico para Wear Os |
+| :------------: | :------------: | :------------: | :------------: |
+|  <img src="https://i.postimg.cc/6pzJFH0F/image.png" width="200"/> | <img src="https://i.postimg.cc/QdPtRxS2/image.png" width="200"/>  |  <img src="https://i.postimg.cc/DwgVXC4B/image.png" width="200"/> |  <img src="https://i.postimg.cc/HLxN7Tgk/image.png" width="200"/> |
+
+
+  &nbsp;
 #### Interfaces de hardware
 Soporte con dispositivos:
  - Wear Os
@@ -166,7 +191,7 @@ Soporte con dispositivos:
 
  #### Interfaces de software
  Base de Datos
-  
+ 
  #### Interfaces de comunicación
 
   
