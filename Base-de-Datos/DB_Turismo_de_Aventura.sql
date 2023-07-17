@@ -18,204 +18,93 @@ USE `db_turismo_de_aventura`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `tbr_atractivo_comentario`
+-- Table structure for table `tbr_vista_atractivo`
 --
 
-DROP TABLE IF EXISTS `tbr_atractivo_comentario`;
+DROP TABLE IF EXISTS `tbr_vista_atractivo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `tbr_atractivo_comentario` (
-  `ID_Atractivo` int unsigned NOT NULL AUTO_INCREMENT,
-  `ID_Comentario` int unsigned NOT NULL,
+CREATE TABLE `tbr_vista_atractivo` (
+  `ID` int unsigned NOT NULL AUTO_INCREMENT,
   `ID_Usuario` int unsigned NOT NULL,
-  `Fecha_Registro` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `Fecha_Actualizacion` datetime DEFAULT NULL,
-  `Estatus` tinyint(1) NOT NULL,
-  UNIQUE KEY `ID_Atractivo_UNIQUE` (`ID_Atractivo`),
-  KEY `fk_atrcom1_comentario_idx` (`ID_Comentario`),
-  KEY `fk_atrcom1_usuario_idx` (`ID_Usuario`),
-  CONSTRAINT `fk_atrcom1_atractivo` FOREIGN KEY (`ID_Atractivo`) REFERENCES `ttb_atractivo_turistico` (`ID`),
-  CONSTRAINT `fk_atrcom2_comentario` FOREIGN KEY (`ID_Comentario`) REFERENCES `ttb_comentarios` (`ID`),
-  CONSTRAINT `fk_atrcom3_usuario` FOREIGN KEY (`ID_Usuario`) REFERENCES `ttb_usuarios` (`Persona_ID`)
+  `ID_Atractivo` int unsigned NOT NULL,
+  `Fecha_Visita` datetime NOT NULL,
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `ID_UNIQUE` (`ID`),
+  KEY `fk_visatr1_usuario_idx` (`ID_Usuario`),
+  KEY `fk_visatr2_atractivo_idx` (`ID_Atractivo`),
+  CONSTRAINT `fk_visatr1_usuario` FOREIGN KEY (`ID_Usuario`) REFERENCES `ttb_usuarios` (`Persona_ID`),
+  CONSTRAINT `fk_visatr2_atractivo` FOREIGN KEY (`ID_Atractivo`) REFERENCES `ttb_atractivo_turistico` (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tbr_atractivo_comentario`
+-- Dumping data for table `tbr_vista_atractivo`
 --
 
-LOCK TABLES `tbr_atractivo_comentario` WRITE;
-/*!40000 ALTER TABLE `tbr_atractivo_comentario` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tbr_atractivo_comentario` ENABLE KEYS */;
+LOCK TABLES `tbr_vista_atractivo` WRITE;
+/*!40000 ALTER TABLE `tbr_vista_atractivo` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tbr_vista_atractivo` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `tbr_atractivo_valoracion`
+-- Table structure for table `tbr_vista_establecimiento`
 --
 
-DROP TABLE IF EXISTS `tbr_atractivo_valoracion`;
+DROP TABLE IF EXISTS `tbr_vista_establecimiento`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `tbr_atractivo_valoracion` (
-  `ID_Atractivo` int unsigned NOT NULL AUTO_INCREMENT,
-  `ID_Valoracion` int unsigned NOT NULL,
+CREATE TABLE `tbr_vista_establecimiento` (
+  `ID` int unsigned NOT NULL AUTO_INCREMENT,
   `ID_Usuario` int unsigned NOT NULL,
-  `ID_Criterio` int unsigned NOT NULL,
-  `Fecha_Registro` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `Fecha_Actualizacion` datetime DEFAULT NULL,
-  `Estatus` tinyint(1) NOT NULL,
-  UNIQUE KEY `ID_Atractivo_UNIQUE` (`ID_Atractivo`),
-  KEY `fk_atrval1_valoracion_idx` (`ID_Valoracion`),
-  KEY `fk_atrval2_usuario_idx` (`ID_Usuario`),
-  KEY `fk_atrval3_criterio_idx` (`ID_Criterio`),
-  CONSTRAINT `fk_atrval1_atractivo` FOREIGN KEY (`ID_Atractivo`) REFERENCES `ttb_atractivo_turistico` (`ID`),
-  CONSTRAINT `fk_atrval2_valoracion` FOREIGN KEY (`ID_Valoracion`) REFERENCES `ttb_valoracion` (`ID`),
-  CONSTRAINT `fk_atrval3_usuario` FOREIGN KEY (`ID_Usuario`) REFERENCES `ttb_usuarios` (`Persona_ID`),
-  CONSTRAINT `fk_atrval4_criterio` FOREIGN KEY (`ID_Criterio`) REFERENCES `ttb_criterio` (`ID`)
+  `ID_Establecimiento` int unsigned NOT NULL,
+  `Fecha_Visita` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `ID_UNIQUE` (`ID`),
+  KEY `fk_visest1_usuario_idx` (`ID_Usuario`),
+  KEY `fk_visest2_establecimiento_idx` (`ID_Establecimiento`),
+  CONSTRAINT `fk_visest1_usuario` FOREIGN KEY (`ID_Usuario`) REFERENCES `ttb_usuarios` (`Persona_ID`),
+  CONSTRAINT `fk_visest2_establecimiento` FOREIGN KEY (`ID_Establecimiento`) REFERENCES `ttb_establecimientos` (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tbr_atractivo_valoracion`
+-- Dumping data for table `tbr_vista_establecimiento`
 --
 
-LOCK TABLES `tbr_atractivo_valoracion` WRITE;
-/*!40000 ALTER TABLE `tbr_atractivo_valoracion` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tbr_atractivo_valoracion` ENABLE KEYS */;
+LOCK TABLES `tbr_vista_establecimiento` WRITE;
+/*!40000 ALTER TABLE `tbr_vista_establecimiento` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tbr_vista_establecimiento` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `tbr_establecimiento_comentario`
+-- Table structure for table `tbr_vista_pueblo`
 --
 
-DROP TABLE IF EXISTS `tbr_establecimiento_comentario`;
+DROP TABLE IF EXISTS `tbr_vista_pueblo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `tbr_establecimiento_comentario` (
-  `ID_Establecimiento` int unsigned NOT NULL AUTO_INCREMENT,
-  `ID_Comentario` int unsigned NOT NULL,
+CREATE TABLE `tbr_vista_pueblo` (
+  `ID` int unsigned NOT NULL AUTO_INCREMENT,
   `ID_Usuario` int unsigned NOT NULL,
-  `Fecha_Registro` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `Fecha_Actualizacion` datetime DEFAULT NULL,
-  `Estatus` tinyint(1) NOT NULL,
-  UNIQUE KEY `ID_Establecimiento_UNIQUE` (`ID_Establecimiento`),
-  KEY `fk_estcom2_comentario_idx` (`ID_Comentario`),
-  KEY `fk_estcom3_usuario_idx` (`ID_Usuario`),
-  CONSTRAINT `fk_estcom1_establecimiento` FOREIGN KEY (`ID_Establecimiento`) REFERENCES `ttb_establecimientos` (`ID`),
-  CONSTRAINT `fk_estcom2_comentario` FOREIGN KEY (`ID_Comentario`) REFERENCES `ttb_comentarios` (`ID`),
-  CONSTRAINT `fk_estcom3_usuario` FOREIGN KEY (`ID_Usuario`) REFERENCES `ttb_usuarios` (`Persona_ID`)
+  `ID_Pueblo` int unsigned NOT NULL,
+  `Fecha_Visita` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `ID_UNIQUE` (`ID`),
+  KEY `fk_vispue1_usuario_idx` (`ID_Usuario`),
+  KEY `fk_vispue2_pueblo_idx` (`ID_Pueblo`),
+  CONSTRAINT `fk_vispue1_usuario` FOREIGN KEY (`ID_Usuario`) REFERENCES `ttb_usuarios` (`Persona_ID`),
+  CONSTRAINT `fk_vispue2_pueblo` FOREIGN KEY (`ID_Pueblo`) REFERENCES `ttb_pueblos_magicos` (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tbr_establecimiento_comentario`
+-- Dumping data for table `tbr_vista_pueblo`
 --
 
-LOCK TABLES `tbr_establecimiento_comentario` WRITE;
-/*!40000 ALTER TABLE `tbr_establecimiento_comentario` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tbr_establecimiento_comentario` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `tbr_establecimiento_valoracion`
---
-
-DROP TABLE IF EXISTS `tbr_establecimiento_valoracion`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `tbr_establecimiento_valoracion` (
-  `ID_Establecimiento` int unsigned NOT NULL AUTO_INCREMENT,
-  `ID_Valoracion` int unsigned NOT NULL,
-  `ID_Usuario` int unsigned NOT NULL,
-  `ID_Criterio` int unsigned NOT NULL,
-  `Fecha_Registro` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `Fecha_Actualizacion` datetime DEFAULT NULL,
-  `Estatus` tinyint(1) NOT NULL,
-  UNIQUE KEY `ID_Establecimiento_UNIQUE` (`ID_Establecimiento`),
-  KEY `fk_atrval1_valoracion_idx` (`ID_Valoracion`),
-  KEY `fk_atrval2_Usuario_idx` (`ID_Usuario`),
-  KEY `fk_atrval3_criterio_idx` (`ID_Criterio`),
-  CONSTRAINT `fk_estval1_establecimiento` FOREIGN KEY (`ID_Establecimiento`) REFERENCES `ttb_establecimientos` (`ID`),
-  CONSTRAINT `fk_estval2_valoracion` FOREIGN KEY (`ID_Valoracion`) REFERENCES `ttb_valoracion` (`ID`),
-  CONSTRAINT `fk_estval3_Usuario` FOREIGN KEY (`ID_Usuario`) REFERENCES `ttb_usuarios` (`Persona_ID`),
-  CONSTRAINT `fk_estval4_criterio` FOREIGN KEY (`ID_Criterio`) REFERENCES `ttb_criterio` (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `tbr_establecimiento_valoracion`
---
-
-LOCK TABLES `tbr_establecimiento_valoracion` WRITE;
-/*!40000 ALTER TABLE `tbr_establecimiento_valoracion` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tbr_establecimiento_valoracion` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `tbr_pueblomagico_comentario`
---
-
-DROP TABLE IF EXISTS `tbr_pueblomagico_comentario`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `tbr_pueblomagico_comentario` (
-  `ID_PuebloMagico` int unsigned NOT NULL AUTO_INCREMENT,
-  `ID_Comentario` int unsigned NOT NULL,
-  `ID_Usuario` int unsigned NOT NULL,
-  `Fecha_Registro` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `Fecha_Actualizacion` datetime DEFAULT NULL,
-  `Estatus` tinyint(1) NOT NULL,
-  UNIQUE KEY `ID_PuebloMagico_UNIQUE` (`ID_PuebloMagico`),
-  KEY `fk_puebcom1_comentario_idx` (`ID_Comentario`),
-  KEY `fk_puebcom2_Usuario_idx` (`ID_Usuario`),
-  CONSTRAINT `fk_puebcom1_pueblo` FOREIGN KEY (`ID_PuebloMagico`) REFERENCES `ttb_pueblos_magicos` (`ID`),
-  CONSTRAINT `fk_puebcom2_comentario` FOREIGN KEY (`ID_Comentario`) REFERENCES `ttb_comentarios` (`ID`),
-  CONSTRAINT `fk_puebcom3_usuario` FOREIGN KEY (`ID_Usuario`) REFERENCES `ttb_usuarios` (`Persona_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `tbr_pueblomagico_comentario`
---
-
-LOCK TABLES `tbr_pueblomagico_comentario` WRITE;
-/*!40000 ALTER TABLE `tbr_pueblomagico_comentario` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tbr_pueblomagico_comentario` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `tbr_pueblomagico_valoracion`
---
-
-DROP TABLE IF EXISTS `tbr_pueblomagico_valoracion`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `tbr_pueblomagico_valoracion` (
-  `ID_PuebloMagico` int unsigned NOT NULL AUTO_INCREMENT,
-  `ID_Valoracion` int unsigned NOT NULL,
-  `ID_Criterio` int unsigned NOT NULL,
-  `ID_Usuario` int unsigned NOT NULL,
-  `Fecha_Registro` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `Fecha_Actualizacion` datetime DEFAULT NULL,
-  `Estatus` tinyint(1) NOT NULL,
-  UNIQUE KEY `ID_PuebloMagico_UNIQUE` (`ID_PuebloMagico`),
-  KEY `fk_puebval2_valoracion_idx` (`ID_Valoracion`),
-  KEY `fk_puebval3_criterio_idx` (`ID_Criterio`),
-  KEY `fk_puebval4_usuario_idx` (`ID_Usuario`),
-  CONSTRAINT `fk_puebval1_pueblo` FOREIGN KEY (`ID_PuebloMagico`) REFERENCES `ttb_pueblos_magicos` (`ID`),
-  CONSTRAINT `fk_puebval2_valoracion` FOREIGN KEY (`ID_Valoracion`) REFERENCES `ttb_valoracion` (`ID`),
-  CONSTRAINT `fk_puebval3_criterio` FOREIGN KEY (`ID_Criterio`) REFERENCES `ttb_criterio` (`ID`),
-  CONSTRAINT `fk_puebval4_usuario` FOREIGN KEY (`ID_Usuario`) REFERENCES `ttb_usuarios` (`Persona_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `tbr_pueblomagico_valoracion`
---
-
-LOCK TABLES `tbr_pueblomagico_valoracion` WRITE;
-/*!40000 ALTER TABLE `tbr_pueblomagico_valoracion` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tbr_pueblomagico_valoracion` ENABLE KEYS */;
+LOCK TABLES `tbr_vista_pueblo` WRITE;
+/*!40000 ALTER TABLE `tbr_vista_pueblo` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tbr_vista_pueblo` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -269,8 +158,11 @@ CREATE TABLE `ttb_comentarios` (
   `Fecha_Actualizacion` datetime DEFAULT NULL,
   `Tipo` enum('Positivo') NOT NULL,
   `Publicado` tinyint(1) DEFAULT NULL,
+  `ID_Usuario` int unsigned NOT NULL,
   PRIMARY KEY (`ID`),
-  UNIQUE KEY `ID_UNIQUE` (`ID`)
+  UNIQUE KEY `ID_UNIQUE` (`ID`),
+  KEY `fk_comentario1_usuario_idx` (`ID_Usuario`),
+  CONSTRAINT `fk_comentario1_usuario` FOREIGN KEY (`ID_Usuario`) REFERENCES `ttb_usuarios` (`Persona_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -327,7 +219,7 @@ CREATE TABLE `ttb_establecimientos` (
   `Fecha_Registro` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `Fecha_Actualizacion` datetime DEFAULT NULL,
   `Valoracion_Global` float NOT NULL,
-  `Atractivo_ID` int unsigned DEFAULT NULL,
+  `Atractivo_ID` int unsigned NOT NULL,
   PRIMARY KEY (`ID`),
   UNIQUE KEY `ID_UNIQUE` (`ID`),
   KEY `fk_establecimiento1_ubicacion_idx` (`Ubicacion`),
@@ -486,6 +378,7 @@ CREATE TABLE `ttb_usuarios` (
   `Rol` int unsigned NOT NULL,
   PRIMARY KEY (`Persona_ID`),
   UNIQUE KEY `Persona_ID_UNIQUE` (`Persona_ID`),
+  UNIQUE KEY `Nombre_Usuario_UNIQUE` (`Nombre_Usuario`),
   KEY `fk_usuario2_rol_idx` (`Rol`),
   CONSTRAINT `fk_usuario1_persona` FOREIGN KEY (`Persona_ID`) REFERENCES `ttb_personas` (`ID`),
   CONSTRAINT `fk_usuario2_rol` FOREIGN KEY (`Rol`) REFERENCES `ttb_roles` (`ID`)
@@ -514,8 +407,14 @@ CREATE TABLE `ttb_valoracion` (
   `Estatus` tinyint(1) NOT NULL DEFAULT '1',
   `Fecha_Registro` datetime NOT NULL,
   `Fecha_Actualizacion` datetime DEFAULT NULL,
+  `ID_Usuario` int unsigned NOT NULL,
+  `ID_Criterio` int unsigned NOT NULL,
   PRIMARY KEY (`ID`),
-  UNIQUE KEY `ID_UNIQUE` (`ID`)
+  UNIQUE KEY `ID_UNIQUE` (`ID`),
+  KEY `fk_valoracion1_usuario_idx` (`ID_Usuario`),
+  KEY `fk_valoracion2_Criterio_idx` (`ID_Criterio`),
+  CONSTRAINT `fk_valoracion1_usuario` FOREIGN KEY (`ID_Usuario`) REFERENCES `ttb_usuarios` (`Persona_ID`),
+  CONSTRAINT `fk_valoracion2_Criterio` FOREIGN KEY (`ID_Criterio`) REFERENCES `ttb_criterio` (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -540,8 +439,11 @@ CREATE TABLE `ttc_horarios` (
   `Dia` varchar(20) NOT NULL,
   `Hora_apertura` time NOT NULL,
   `Hora_Cierre` time NOT NULL,
+  `ID_Establecimiento` int unsigned NOT NULL,
   PRIMARY KEY (`ID`),
-  UNIQUE KEY `ID_UNIQUE` (`ID`)
+  UNIQUE KEY `ID_UNIQUE` (`ID`),
+  KEY `fk_horario1_usuario_idx` (`ID_Establecimiento`),
+  CONSTRAINT `fk_horario1_usuario` FOREIGN KEY (`ID_Establecimiento`) REFERENCES `ttb_establecimientos` (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -553,10 +455,6 @@ LOCK TABLES `ttc_horarios` WRITE;
 /*!40000 ALTER TABLE `ttc_horarios` DISABLE KEYS */;
 /*!40000 ALTER TABLE `ttc_horarios` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Dumping events for database 'db_turismo_de_aventura'
---
 
 --
 -- Dumping routines for database 'db_turismo_de_aventura'
@@ -571,4 +469,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-07-13  9:24:47
+-- Dump completed on 2023-07-16 20:47:19
