@@ -9,8 +9,8 @@ db_turismo_de_aventura = Table(
     Column("Nombre", String(100)),
     Column("Primer_Apellido", String(100)),
     Column("Segundo_Apellido", String(100)),
-    Column("Genero", Enum('M','F','Prefiero no decirlo')),
+    Column("Genero", Enum('M','F','N/A')),
     Column("Fecha_Nacimiento", DateTime),
-    Column("Estatus", SmallInteger),
+    Column("Estatus", SmallInteger, default='1'),
     Column("Fecha_Registro", DateTime)
 )

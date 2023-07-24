@@ -13,6 +13,7 @@ def obtenerPersonas():
     personas_list_dicts = []
     for personas_tuple in personas_list_tuples:
         personas_dict = {
+            "ID":personas_tuple[0],
             "Nombre": personas_tuple[1],
             "Primer_Apellido": personas_tuple[2],
             "Segundo_Apellido": personas_tuple[3],
@@ -34,7 +35,6 @@ def insertPersonas(persona: Persona):
         Segundo_Apellido=persona.Segundo_Apellido,
         Genero=genero_enum,  # Utilizar el miembro Enum correspondiente
         Fecha_Nacimiento=persona.Fecha_Nacimiento,
-        Estatus=persona.Estatus,
         Fecha_Registro=datetime.now()
     ))
     #conn.commit()
@@ -79,8 +79,6 @@ def actualizarPersonaPorId(persona: Persona, ID):
             Segundo_Apellido=persona.Segundo_Apellido,
             Genero=persona.Genero,
             Fecha_Nacimiento=persona.Fecha_Nacimiento,
-            Estatus=persona.Estatus,
-            Fecha_Registro=persona.Fecha_Registro
         ).where(db_turismo_de_aventura.c.ID == ID))
         #conn.commit()
         resp = {
@@ -89,6 +87,7 @@ def actualizarPersonaPorId(persona: Persona, ID):
     return resp
 
 
+'''
 @router.delete('/personas/delete/{ID}')
 def eliminarPersonaPorId(ID):
     res = obtenerPersonaPorId(ID)
@@ -96,6 +95,21 @@ def eliminarPersonaPorId(ID):
         return res
     else:
         result = conn.execute(db_turismo_de_aventura.delete().where(db_turismo_de_aventura.c.ID == ID))
+        #conn.commit()
+        res = {
+            "status": f"Persona con ID {ID} eliminada con éxito"
+        }
+    return res
+
+'''
+
+@router.delete('/personasST/delete/{ID}')
+def eliminarPersonaPorId(ID):
+    res = obtenerPersonaPorId(ID)
+    if res.get("status") == "No existe la persona ingresada":
+        return res
+    else:
+        result = conn.execute(db_turismo_de_aventura.update().values(Estatus=False).where(db_turismo_de_aventura.c.ID == ID))
         #conn.commit()
         res = {
             "status": f"Persona con ID {ID} eliminada con éxito"
