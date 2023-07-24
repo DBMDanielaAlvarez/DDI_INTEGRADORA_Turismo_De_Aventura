@@ -9,6 +9,7 @@
 &nbsp;
 [![organigrama.png](https://i.postimg.cc/PryCJW3f/organigrama.png)](https://postimg.cc/mtcL6HWK)
 
+
 &nbsp;
 ### Información del Proyecto
 | Empresa / Organización   |  AMDL SOFTWARE & TECNOLOGY |
@@ -36,16 +37,15 @@
 
 &nbsp;
 ### Proposito
-<div class=text-justify>
 Turismo de Aventura
+<p align="justify"> 
 Dicho documento cuenta con las especificaciones necesarias para el desarrollo del software “Turismo de Aventura” comprendiendo las siguientes partes del mismo.
-
-Roles de trabajo para los diferentes representantes, el alcance del mismo, los requerimientos funcionales y no funcionales, así como las funcionalidades del mismo sistema descritas por los requerimientos.
+Roles de trabajo para los diferentes representantes, el alcance del mismo, los requerimientos funcionales y no funcionales, así como las funcionalidades del mismo sistema descritas por los requerimientos.</p>
 
 &nbsp;
 ### Alcance del producto / Software
-<div class=text-justify>
-Realización de una aplicación para Wear OS, implementada para la recomendación de lugares turísticos en cada uno de los diferentes pueblos mágicos del estado de Puebla. </div>
+<p align="justify"> 
+Realización de una aplicación para Wear OS, implementada para la recomendación de lugares turísticos en cada uno de los diferentes pueblos mágicos del estado de Puebla.</p>
 
 1. Da al usuario el o los lugares turísticos, en el cual el usuario se encuentre. 
 2. Describe el lugar turístico con la información mas relevante
@@ -54,8 +54,7 @@ Realización de una aplicación para Wear OS, implementada para la recomendació
 
 &nbsp;
 ### Funcionalidades del producto
-<div class=text-justify>
-Dichas funcionalidades del producto favorecen al usuario para una mejor experiencia hacia el mismo sistema. Manteniendo una buena experiencia hacia el mismo. </div>
+<p align="justify"> Dichas funcionalidades del producto favorecen al usuario para una mejor experiencia hacia el mismo sistema. Manteniendo una buena experiencia hacia el mismo.</p>
  
 1. Datos registrados. Se tendrá una cantidad de datos de los lugares donde incluyan sus características indicadas anteriormente. 
 2. Búsqueda de pueblos mágicos. Contará con una lista de los pueblos mágicos los cuales se encuentran dentro del estado de Puebla. 
