@@ -50,13 +50,13 @@ def obtenerPersonaPorId(ID):
     personas_tuple = conn.execute(db_turismo_de_aventura.select().where(db_turismo_de_aventura.c.ID == ID)).first()
     if personas_tuple is not None:
         personas_dict = {
-            "Nombre": personas_tuple[0],
-            "Primer_Apellido": personas_tuple[1],
-            "Segundo_Apellido": personas_tuple[2],
-            "Genero": personas_tuple[3],
-            "Fecha_Nacimiento": personas_tuple[4],
-            "Estatus": personas_tuple[5],
-            "Fecha_Registro": personas_tuple[6]
+            "Nombre": personas_tuple[1],
+            "Primer_Apellido": personas_tuple[2],
+            "Segundo_Apellido": personas_tuple[3],
+            "Genero": personas_tuple[4],
+            "Fecha_Nacimiento": personas_tuple[5],
+            "Estatus": personas_tuple[6],
+            "Fecha_Registro": personas_tuple[7]
         }
         return personas_dict
     else:
