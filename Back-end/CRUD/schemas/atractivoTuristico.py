@@ -1,4 +1,5 @@
 from enum import Enum
+from pydantic import BaseModel
 from datetime import date, datetime
 from sqlalchemy import Table, Column, Integer, String, DateTime, Float, SmallInteger, Enum as SQLAlchemyEnum, ForeignKey
 from sqlalchemy.orm import relationship
@@ -7,7 +8,10 @@ from sqlalchemy.ext.declarative import declarative_base
 
 # Definimos la clase de Pydantic para el tipo de ambiente
 class TipoAmbienteEnum(str, Enum):
-    FAMILIAR = 'familiar'
+    FAMILIAR = 'Familiar'
+    ADULTOS = 'Adultos'
+    NIÑOS = 'Niños'
+    ADOLECENTES = 'Adolecentes'
 
 # Definimos la clase de Pydantic para el tipo de atractivo turístico
 class TipoAtractivoEnum(str, Enum):
@@ -20,15 +24,11 @@ class AtractivoTuristico(BaseModel):
     Descripcion: str
     Ubicacion: int
     Tipo: TipoAtractivoEnum
-    Fecha_Registro: datetime
-    Fecha_Actualizacion: datetime
-    Estatus: int
     Tipo_Ambiente: TipoAmbienteEnum
     Pueblo_Magico: int
-    Valoracion_Global: float
 
 # Definimos la tabla ttb_atractivo_turistico
-class ttb_atractivo_turistico(Base):
+'''class ttb_atractivo_turistico(Base):
     __tablename__ = 'ttb_atractivo_turistico'
     
     ID = Column(Integer, primary_key=True, autoincrement=True)
@@ -44,5 +44,5 @@ class ttb_atractivo_turistico(Base):
     Valoracion_Global = Column(Float)
 
 # Creamos las tablas
-Base.metadata.create_all(engine)
+Base.metadata.create_all(engine)'''
 

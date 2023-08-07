@@ -1,4 +1,5 @@
 from datetime import datetime
+from pydantic import BaseModel
 from sqlalchemy import Table, Column, Integer, String, DateTime, SmallInteger, Enum, ForeignKey
 from sqlalchemy.schema import MetaData
 from sqlalchemy.ext.declarative import declarative_base
@@ -7,13 +8,12 @@ from sqlalchemy.ext.declarative import declarative_base
 class Comentario(BaseModel):
     Descripcion: str
     Fecha_Registro: datetime
-    Fecha_Actualizacion: datetime
     Tipo: str
     Publicado: int
     ID_Usuario: int
 
 # Definimos la tabla ttb_comentarios
-class ttb_comentarios(Base):
+'''class ttb_comentarios(Base):
     __tablename__ = 'ttb_comentarios'
     
     ID = Column(Integer, primary_key=True, autoincrement=True)
@@ -25,4 +25,4 @@ class ttb_comentarios(Base):
     ID_Usuario = Column(Integer, ForeignKey('ttb_usuarios.Persona_ID'))
 
 # Creamos las tablas
-Base.metadata.create_all(engine)
+Base.metadata.create_all(engine)'''
