@@ -1,7 +1,7 @@
- [![Diapositiva1.jpg](https://i.postimg.cc/nchZkGWj/Diapositiva1.jpg)](https://postimg.cc/Lhwr4L22)
+[![Turismo-De-Aventura.png](https://i.postimg.cc/1RdZXg4Q/Turismo-De-Aventura.png)](https://postimg.cc/3W2qbxgS)
 
+------------
 
-# Turismo De Aventura
 
 &nbsp;
 ### Organigrama de Equipo de Trabajo
