@@ -6,5 +6,6 @@ from typing import List
 class Criterio(BaseModel):
     ID:int 
     Descripcion:str
+    Nombre:str
     
     

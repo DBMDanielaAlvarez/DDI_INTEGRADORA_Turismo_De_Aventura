@@ -9,7 +9,7 @@ class Ubicacion(BaseModel):
     Longitud: float
 
 # Definimos la tabla ttb_ubicaciones
-class ttb_ubicaciones(Base):
+'''class ttb_ubicaciones(Base):
     __tablename__ = 'ttb_ubicaciones'
     
     ID = Column(Integer, primary_key=True, autoincrement=True)
@@ -18,5 +18,5 @@ class ttb_ubicaciones(Base):
     Longitud = Column(Float)
 
 # Creamos las tablas
-Base.metadata.create_all(engine)
+Base.metadata.create_all(engine)'''
 

@@ -3,7 +3,7 @@ from sqlalchemy import Table, Text, Column, Integer, String, DateTime, SmallInte
 from config.db import meta, engine
 
 db_turismo_de_aventura = Table(
-    "ttb_roles", meta,
+    "tbc_roles", meta,
     Column("ID", Integer, primary_key=True, autoincrement=True),
     Column("Nombre", String(100)),
     Column("Descripcion", Text),#es text revisar como ponerlo

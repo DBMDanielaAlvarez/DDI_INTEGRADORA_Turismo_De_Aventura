@@ -4,7 +4,7 @@ from config.db import meta, engine
 
 
 db_turismo_de_aventura = Table(
-    "ttb_personas", meta,
+    "tbb_personas", meta,
     Column("ID", Integer, primary_key=True, autoincrement=True),
     Column("Nombre", String(100)),
     Column("Primer_Apellido", String(100)),

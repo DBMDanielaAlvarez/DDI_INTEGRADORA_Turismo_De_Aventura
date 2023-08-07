@@ -1,18 +1,12 @@
 from datetime import datetime
-from pydantic import BaseModel
 from sqlalchemy import Table, Column, Integer, String, DateTime, SmallInteger, Float, ForeignKey
 from sqlalchemy.schema import MetaData
 from sqlalchemy.ext.declarative import declarative_base
 
 # Definimos la clase de Pydantic para el establecimiento
 class Establecimiento(BaseModel):
-    Nombre: str
-    Descripcion: str
-    Tipo: str
-    Fecha_Registro: datetime
-    Fecha_Actualizacion: datetime
-    Estatus: int
-    ID_Atractivo_Turistico: int
+    
+    Fecha_Visita: datetime
 
 # Definimos la tabla ttb_establecimientos
 '''class ttb_establecimientos(Base):

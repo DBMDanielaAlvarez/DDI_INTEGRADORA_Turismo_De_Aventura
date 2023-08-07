@@ -1,4 +1,5 @@
 from datetime import datetime
+from pydantic import BaseModel
 from sqlalchemy import Table, Column, Integer, String, DateTime, Time, ForeignKey
 from sqlalchemy.schema import MetaData
 from sqlalchemy.ext.declarative import declarative_base
@@ -11,7 +12,7 @@ class Horario(BaseModel):
     ID_Establecimiento: int
 
 # Definimos la tabla ttc_horarios
-class ttc_horarios(Base):
+'''class ttc_horarios(Base):
     __tablename__ = 'ttc_horarios'
     
     ID = Column(Integer, primary_key=True, autoincrement=True)
@@ -21,4 +22,4 @@ class ttc_horarios(Base):
     ID_Establecimiento = Column(Integer, ForeignKey('ttb_establecimientos.ID'))
 
 # Creamos las tablas
-Base.metadata.create_all(engine)
+Base.metadata.create_all(engine)'''

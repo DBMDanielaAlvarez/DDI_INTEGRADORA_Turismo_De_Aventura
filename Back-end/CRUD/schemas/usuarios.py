@@ -6,22 +6,17 @@ from sqlalchemy.schema import MetaData
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import create_engine
 
-# Definimos la clase de Pydantic para el género
-class GeneroEnum(str, Enum):
-    OTRO = 'N/A'
-    MASCULINO = 'M'
-    FEMENINO = 'F'
+
 
 # Definimos la clase de Pydantic para el usuario
 class Usuario(BaseModel):
     Nombre_Usuario: str
     Correo: str
     Contraseña: str
-    Estatus: int
     Fecha_Registro: datetime
 
 # Definimos la tabla ttb_usuarios
-class ttb_usuarios(Base):
+'''class ttb_usuarios(Base):
     __tablename__ = 'ttb_usuarios'
     
     Persona_ID = Column(Integer, primary_key=True, autoincrement=True)
@@ -34,3 +29,4 @@ class ttb_usuarios(Base):
 # Creamos las tablas
 Base.metadata.create_all(engine)
 
+'''
