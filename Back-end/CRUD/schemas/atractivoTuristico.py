@@ -15,8 +15,9 @@ class TipoAmbienteEnum(str, Enum):
 
 # Definimos la clase de Pydantic para el tipo de atractivo turístico
 class TipoAtractivoEnum(str, Enum):
-    GASTRONOMICO = 'Gatronomico'
-    FESTIVIDAD = 'Festividad'
+    GASTRONOMIA = 'Gastronomia'
+    CULTURAL = 'Cultural'
+    NATURALEZA = 'Naturaleza'
 
 # Definimos la clase de Pydantic para el atractivo turístico
 class AtractivoTuristico(BaseModel):

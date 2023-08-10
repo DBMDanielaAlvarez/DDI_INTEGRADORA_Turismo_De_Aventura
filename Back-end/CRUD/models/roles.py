@@ -8,8 +8,6 @@ db_turismo_de_aventura = Table(
     Column("Nombre", String(100)),
     Column("Descripcion", Text),#es text revisar como ponerlo
     Column("Estatus", SmallInteger),
-    Column("Fecha_Registro", DateTime),
-    Column("Fecha_Actulizacion", DateTime)
-    
+    Column("Fecha_Registro", DateTime)
 
 )

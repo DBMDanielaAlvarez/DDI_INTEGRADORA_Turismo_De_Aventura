@@ -1,3 +1,4 @@
+from pydantic import BaseModel
 from enum import Enum
 from datetime import date, datetime
 from sqlalchemy import Table, Column, Integer, String, DateTime, Float, ForeignKey
@@ -13,7 +14,7 @@ class PuebloMagico(BaseModel):
     Ubicacion: int
     Valoracion_Global: float
 
-# Definimos la tabla ttb_pueblos_magicos
+'''
 class ttb_pueblos_magicos(Base):
     __tablename__ = 'ttb_pueblos_magicos'
     
@@ -25,4 +26,4 @@ class ttb_pueblos_magicos(Base):
     Valoracion_Global = Column(Float)
 
 # Creamos las tablas
-Base.metadata.create_all(engine)
+Base.metadata.create_all(engine)'''

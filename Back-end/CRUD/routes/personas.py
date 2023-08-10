@@ -4,10 +4,10 @@ from models.personas import db_turismo_de_aventura
 from schemas.personas import Persona, GeneroEnum
 from datetime import datetime
 
-router = APIRouter()
+routerPersonas = APIRouter()
 
 # Obtener Todas las personas
-@router.get('/personas')
+@routerPersonas.get('/personas')
 def obtenerPersonas():
     personas_list_tuples = conn.execute(db_turismo_de_aventura.select()).fetchall()
     personas_list_dicts = []
@@ -26,7 +26,7 @@ def obtenerPersonas():
     return personas_list_dicts
 
 # Ruta para crear una nueva persona
-@router.post('/personas/insert')
+@routerPersonas.post('/personas/insert')
 def insertPersonas(persona: Persona):
     genero_enum = GeneroEnum(persona.Genero)  # Convertir la cadena al miembro Enum correspondiente
     conn.execute(db_turismo_de_aventura.insert().values(
@@ -37,7 +37,7 @@ def insertPersonas(persona: Persona):
         Fecha_Nacimiento=persona.Fecha_Nacimiento,
         Fecha_Registro=datetime.now()
     ))
-    #conn.commit()
+    conn.commit()
     res = {
         "status": "La persona ha sido insertada con éxito"
     }
@@ -45,7 +45,7 @@ def insertPersonas(persona: Persona):
 
 
 
-@router.get('/personas/{ID}')
+@routerPersonas.get('/personas/{ID}')
 def obtenerPersonaPorId(ID):
     personas_tuple = conn.execute(db_turismo_de_aventura.select().where(db_turismo_de_aventura.c.ID == ID)).first()
     if personas_tuple is not None:
@@ -66,7 +66,7 @@ def obtenerPersonaPorId(ID):
         }
         return res
     
-@router.put('/personas/update/{ID}')
+@routerPersonas.put('/personas/update/{ID}')
 def actualizarPersonaPorId(persona: Persona, ID):
     res = obtenerPersonaPorId(ID)
     if res.get("status") == "No existe la persona ingresada":
@@ -81,7 +81,7 @@ def actualizarPersonaPorId(persona: Persona, ID):
             Genero=persona.Genero,
             Fecha_Nacimiento=persona.Fecha_Nacimiento,
         ).where(db_turismo_de_aventura.c.ID == ID))
-        #conn.commit()
+        conn.commit()
         resp = {
             "status": "Persona actualizada con éxito"
         }
@@ -104,14 +104,14 @@ def eliminarPersonaPorId(ID):
 
 '''
 
-@router.delete('/personasST/delete/{ID}')
+@routerPersonas.delete('/personasST/delete/{ID}')
 def eliminarPersonaPorId(ID):
     res = obtenerPersonaPorId(ID)
     if res.get("status") == "No existe la persona ingresada":
         return res
     else:
         result = conn.execute(db_turismo_de_aventura.update().values(Estatus=False).where(db_turismo_de_aventura.c.ID == ID))
-        #conn.commit()
+        conn.commit()
         res = {
             "status": f"Persona con ID {ID} eliminada con éxito"
         }

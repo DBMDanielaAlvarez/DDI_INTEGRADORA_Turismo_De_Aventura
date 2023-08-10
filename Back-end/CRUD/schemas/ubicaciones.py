@@ -1,3 +1,4 @@
+from pydantic import BaseModel
 from sqlalchemy import Table, Column, Integer, String, Float
 from sqlalchemy.schema import MetaData
 from sqlalchemy.ext.declarative import declarative_base

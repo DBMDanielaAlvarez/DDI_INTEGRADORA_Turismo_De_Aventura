@@ -1,8 +1,8 @@
 from enum import Enum
-from sqlalchemy import Table, Column, Integer, String, DateTime, SmallInteger, Enum, relationship, Text, Float, ForeignKey
+from sqlalchemy import Table, Column, Integer, String, DateTime, Enum, ForeignKey
 from config.db import meta, engine
 
-ttc_horarios = Table(
+db_turismo_de_aventura = Table(
     "tbc_horarios", meta,
     Column("ID", Integer, primary_key=True, autoincrement=True),
     Column("Dia", String(20)),

@@ -4,9 +4,9 @@ from models.atractivoTuristico import db_turismo_de_aventura
 from schemas.atractivoTuristico import AtractivoTuristico, TipoAmbienteEnum, TipoAtractivoEnum
 from datetime import datetime
 
-router = APIRouter()
+routerAturistico = APIRouter()
 
-@router.get('/aturistico')
+@routerAturistico.get('/aturistico')
 def obtenerAtractivoTuristico():
     aturistico_list_tuples = conn.execute(db_turismo_de_aventura.select()).fetchall()
     aturistico_list_dicts = []
@@ -27,7 +27,7 @@ def obtenerAtractivoTuristico():
     return aturistico_list_dicts
 
 
-@router.post('/aturistico/insert')
+@routerAturistico.post('/aturistico/insert')
 def insertAtractivoTuristico(aturistico: AtractivoTuristico):
     tipo_ambiente_enum = TipoAmbienteEnum(aturistico.Tipo_Ambiente)
     tipo_atractivo_enum = TipoAtractivoEnum(aturistico.Tipo) # Convertir la cadena al miembro Enum correspondiente
@@ -49,7 +49,7 @@ def insertAtractivoTuristico(aturistico: AtractivoTuristico):
 
 
 
-@router.get('/aturistico/{ID}')
+@routerAturistico.get('/aturistico/{ID}')
 def obtenerAturisticoPorId(ID):
     aturistico_tuple = conn.execute(db_turismo_de_aventura.select().where(db_turismo_de_aventura.c.ID == ID)).first()
     if aturistico_tuple is not None:
@@ -72,7 +72,7 @@ def obtenerAturisticoPorId(ID):
         }
         return res
     
-@router.put('/aturistico/update/{ID}')
+@routerAturistico.put('/aturistico/update/{ID}')
 def actualizarAturisticoPorId(aturistico: AtractivoTuristico, ID):
     res = obtenerAturisticoPorId(ID)
     if res.get("status") == "No existe el atractivo turistico ingresado":
@@ -94,7 +94,7 @@ def actualizarAturisticoPorId(aturistico: AtractivoTuristico, ID):
         }
     return resp
 
-@router.delete('/aturisticoST/delete/{ID}')
+@routerAturistico.delete('/aturisticoST/delete/{ID}')
 def eliminarAturisticoPorId(ID):
     res = obtenerAturisticoPorId(ID)
     if res.get("status") == "No existe el atractivo turistico ingresado":

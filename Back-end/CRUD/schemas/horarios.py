@@ -1,11 +1,10 @@
 from datetime import datetime
 from pydantic import BaseModel
 from sqlalchemy import Table, Column, Integer, String, DateTime, Time, ForeignKey
-from sqlalchemy.schema import MetaData
-from sqlalchemy.ext.declarative import declarative_base
+
 
 # Definimos la clase de Pydantic para los horarios
-class Horario(BaseModel):
+class Horarios(BaseModel):
     Dia: str
     Hora_apertura: Time
     Hora_Cierre: Time

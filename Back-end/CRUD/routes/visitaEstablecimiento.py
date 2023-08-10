@@ -4,9 +4,9 @@ from models.visitaEstablecimiento import db_turismo_de_aventura
 from schemas.visitaEstablecimiento import Establecimiento
 from datetime import datetime
 
-router = APIRouter()
+routerVestablecimiento = APIRouter()
 
-@router.post('/vestablecimiento/insert')
+@routerVestablecimiento.post('/vestablecimiento/insert')
 def insertvisitaEstablecimiento(vestablecimiento: Establecimiento):
    
     conn.execute(db_turismo_de_aventura.insert().values(

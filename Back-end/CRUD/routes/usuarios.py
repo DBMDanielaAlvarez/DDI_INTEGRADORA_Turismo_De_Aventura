@@ -5,9 +5,9 @@ from schemas.usuarios import Usuario
 from datetime import datetime
 
 
-router = APIRouter()
+routerUsuarios = APIRouter()
 
-@router.get('/usuario')
+@routerUsuarios.get('/usuario')
 def obtenerUsuarios():
     usuarios_list_tuples = conn.execute(db_turismo_de_aventura.select()).fetchall()
     usuarios_list_dicts = []
@@ -24,7 +24,7 @@ def obtenerUsuarios():
         usuarios_list_dicts.append(usuarios_dict)
     return usuarios_list_dicts
 
-@router.post('/usuario/insert')
+@routerUsuarios.post('/usuario/insert')
 def insertUsuario(usuario: Usuario):
     conn.execute(db_turismo_de_aventura.insert().values(
         Nombre_Usuario=usuario.Nombre_Usuario,
@@ -38,7 +38,7 @@ def insertUsuario(usuario: Usuario):
     }
     return res
 
-@router.get('/usuario/{ID}')
+@routerUsuarios.get('/usuario/{ID}')
 def obtenerUsuarioPorId(ID):
     usuarios_tuple = conn.execute(db_turismo_de_aventura.select().where(db_turismo_de_aventura.c.ID == ID)).first()
     if usuarios_tuple is not None:
@@ -58,7 +58,7 @@ def obtenerUsuarioPorId(ID):
         }
         return res
     
-@router.put('/ususrio/update/{ID}')
+@routerUsuarios.put('/ususrio/update/{ID}')
 def actualizarUsuarioPorId(usuario: Usuario, ID):
     res = obtenerUsuarioPorId(ID)
     if res.get("status") == "No existe el usuario ingresado":
@@ -77,7 +77,7 @@ def actualizarUsuarioPorId(usuario: Usuario, ID):
         }
     return resp
 
-@router.delete('/usuarioST/delete/{ID}')
+@routerUsuarios.delete('/usuarioST/delete/{ID}')
 def eliminarUsuarioPorId(ID):
     res = obtenerUsuarioPorId(ID)
     if res.get("status") == "No existe el usuario ingresado":

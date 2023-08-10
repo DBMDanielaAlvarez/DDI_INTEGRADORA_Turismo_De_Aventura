@@ -8,7 +8,7 @@ db_turismo_de_aventura = Table(
     Column("Nombre", String(50)),
     Column("Descripcion", Text),
     Column("Ubicacion", Integer, ForeignKey('ttb_ubicaciones.ID')),
-    Column("Tipo", Enum('Gatronomico', 'Festividad')),
+    Column("Tipo", Enum('Gastronomia', 'Cultural','Naturaleza')),
     Column("Fecha_Registro", DateTime),
     Column("Estatus", SmallInteger, default='1'),
     Column("Tipo_Ambiente", Enum('Familiar','Adultos','Niños','Adolecentes')),

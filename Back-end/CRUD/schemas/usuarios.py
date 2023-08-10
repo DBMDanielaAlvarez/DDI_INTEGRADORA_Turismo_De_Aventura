@@ -1,4 +1,5 @@
 from enum import Enum
+from pydantic import BaseModel
 from datetime import date, datetime
 from sqlalchemy import Table, Column, Integer, String, DateTime, SmallInteger, Enum as SQLAlchemyEnum, ForeignKey
 from sqlalchemy.orm import relationship

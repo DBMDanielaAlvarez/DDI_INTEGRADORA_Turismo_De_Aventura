@@ -4,9 +4,9 @@ from models.valoracion import db_turismo_de_aventura
 from schemas.valoracion import Valoracion, TipoItemEnum
 from datetime import datetime
 
-router = APIRouter()
+routerValoracion = APIRouter()
 
-@router.get('/valoracion')
+@routerValoracion.get('/valoracion')
 def obtenerValoracion():
     valoracion_list_tuples = conn.execute(db_turismo_de_aventura.select()).fetchall()
     valoracion_list_dicts = []
@@ -25,7 +25,7 @@ def obtenerValoracion():
     return valoracion_list_dicts
 
 
-@router.post('/valoracion/insert')
+@routerValoracion.post('/valoracion/insert')
 def insertValoracion(valoracion: Valoracion):
     tipo_item_enum = TipoItemEnum(valoracion.Tipo)
     conn.execute(db_turismo_de_aventura.insert().values(
@@ -39,7 +39,7 @@ def insertValoracion(valoracion: Valoracion):
     }
     return res
 
-@router.get('/valoracion/{ID}')
+@routerValoracion.get('/valoracion/{ID}')
 def obtenerValoracionPorId(ID):
     valoracion_tuple = conn.execute(db_turismo_de_aventura.select().where(db_turismo_de_aventura.c.ID == ID)).first()
     if valoracion_tuple is not None:
@@ -60,7 +60,7 @@ def obtenerValoracionPorId(ID):
         }
         return res
     
-@router.put('/valoracion/update/{ID}')
+@routerValoracion.put('/valoracion/update/{ID}')
 def actualizarValoracionPorId(valoracion: Valoracion, ID):
     res = obtenerValoracionPorId(ID)
     if res.get("status") == "No existe la valoracion ingresada":
@@ -78,7 +78,7 @@ def actualizarValoracionPorId(valoracion: Valoracion, ID):
         }
     return resp
 
-@router.delete('/valoracionST/delete/{ID}')
+@routerValoracion.delete('/valoracionST/delete/{ID}')
 def eliminarValoracionPorId(ID):
     res = obtenerValoracionPorId(ID)
     if res.get("status") == "No existe la valoracion ingresada":
