@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:gravity="center"
+    >
+
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/empresa"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:drawablePadding="12dp"
+        android:gravity="left"
+        android:text="Nombre de la empresa
+        “AMDL”"
+        android:textSize="9dp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginLeft="5dp"/>
+
+    <ImageView
+        android:layout_marginTop="5dp"
+        android:id="@+id/logoempresa"
+        android:layout_width="50px"
+        android:layout_height="50px"
+        android:src="@drawable/logo"
+        android:layout_toRightOf="@id/empresa"
+
+        />
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/app"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="Aplicación
+         desarrollada
+         ”Turismo de aventura”"
+        android:textSize="9dp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_toRightOf="@id/empresa"
+        android:layout_marginLeft="30dp"
+
+        />
+    <ImageView
+        android:layout_marginTop="5dp"
+        android:id="@+id/logoapp"
+        android:layout_width="50px"
+        android:layout_height="50px"
+        android:src="@drawable/logo"
+        android:layout_toRightOf="@+id/app"
+
+        />
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Es una empresa de turismo comprometida en ofrecer a nuestros visitantes informacion sobre
+Pueblos magicos del Estado de Puebla. Nuestro Objetivo es brindar una combinacion perfecta aventura, relajacion y
+descubrimiento en los destinos màs culturales de Puebla."
+        android:textSize="7dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="5dp"
+        android:textColor="#FFFFFF"
+        android:layout_below="@id/empresa"/>
+    <TextView
+        android:id="@+id/info2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Equipo directivo de la empresa:"
+        android:textSize="7dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="5dp"
+        android:textColor="#FFFFFF"
+        android:layout_below="@id/info"/>
+    <TextView
+        android:id="@+id/info3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Daniela Àlvarez Dominguez (DB manager)
+
+                                         Lesly Yareth Hernàndez Bonilla (Desarrollador de frontend)
+
+                                Alfredo Solis Sànchez (Documentador)
+
+                                Marco Antonio Rosas Gonzàlez (Desarrollador de backend)"
+        android:textSize="7dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="5dp"
+        android:textColor="#FFFFFF"
+        android:layout_below="@id/info2"/>
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/borde2"
+        android:onClick="irAMenu"
+        android:layout_below="@+id/info3"
+        />
+
+</RelativeLayout>
