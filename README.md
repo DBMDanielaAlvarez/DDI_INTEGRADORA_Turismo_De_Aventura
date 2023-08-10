@@ -191,8 +191,7 @@ Soporte con dispositivos:
 
  #### Interfaces de software
  Base de Datos
- 
- #### Interfaces de comunicación
+
 
   
 
