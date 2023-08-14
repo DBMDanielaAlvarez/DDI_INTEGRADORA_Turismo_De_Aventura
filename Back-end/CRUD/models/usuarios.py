@@ -12,5 +12,5 @@ db_turismo_de_aventura = Table(
     Column("Estatus", SmallInteger, default='1'),
     Column("Fecha_Registro", DateTime),
     Column("Fecha_Actualizacion", DateTime),
-    Column("Rol", Integer, ForeignKey('tbc_roles.ID'))
+    Column("Rol", Integer, ForeignKey('tbc_roles.ID'),default='1')
 )
