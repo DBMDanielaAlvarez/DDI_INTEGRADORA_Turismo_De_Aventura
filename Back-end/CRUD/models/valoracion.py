@@ -2,7 +2,6 @@ from sqlalchemy import Table, Column, Integer, Float, DateTime, SmallInteger, Fo
 from sqlalchemy.orm import relationship
 from config.db import meta
 
-# Definimos la tabla tbb_valoracion
 db_turismo_de_aventura = Table(
     "tbb_valoracion", meta,
     Column("ID", Integer, primary_key=True, autoincrement=True),

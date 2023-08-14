@@ -40,7 +40,7 @@ def insertUsuario(usuario: Usuario):
 
 @routerUsuarios.get('/usuario/{ID}')
 def obtenerUsuarioPorId(ID):
-    usuarios_tuple = conn.execute(db_turismo_de_aventura.select().where(db_turismo_de_aventura.c.ID == ID)).first()
+    usuarios_tuple = conn.execute(db_turismo_de_aventura.select().where(db_turismo_de_aventura.c.Persona_ID == ID)).first()
     if usuarios_tuple is not None:
         usuarios_dict = {
             "Persona_ID":usuarios_tuple[0],
@@ -83,7 +83,7 @@ def eliminarUsuarioPorId(ID):
     if res.get("status") == "No existe el usuario ingresado":
         return res
     else:
-        result = conn.execute(db_turismo_de_aventura.update().values(Estatus=False).where(db_turismo_de_aventura.c.ID == ID))
+        result = conn.execute(db_turismo_de_aventura.update().values(Estatus=False).where(db_turismo_de_aventura.c.Persona_ID == ID))
         #conn.commit()
         res = {
             "status": f"Usuario con ID {ID} eliminado con éxito"

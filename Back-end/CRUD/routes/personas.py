@@ -37,7 +37,7 @@ def insertPersonas(persona: Persona):
         Fecha_Nacimiento=persona.Fecha_Nacimiento,
         Fecha_Registro=datetime.now()
     ))
-    conn.commit()
+    #conn.commit()
     res = {
         "status": "La persona ha sido insertada con éxito"
     }
@@ -81,7 +81,7 @@ def actualizarPersonaPorId(persona: Persona, ID):
             Genero=persona.Genero,
             Fecha_Nacimiento=persona.Fecha_Nacimiento,
         ).where(db_turismo_de_aventura.c.ID == ID))
-        conn.commit()
+        #conn.commit()
         resp = {
             "status": "Persona actualizada con éxito"
         }
@@ -111,7 +111,7 @@ def eliminarPersonaPorId(ID):
         return res
     else:
         result = conn.execute(db_turismo_de_aventura.update().values(Estatus=False).where(db_turismo_de_aventura.c.ID == ID))
-        conn.commit()
+        #conn.commit()
         res = {
             "status": f"Persona con ID {ID} eliminada con éxito"
         }
