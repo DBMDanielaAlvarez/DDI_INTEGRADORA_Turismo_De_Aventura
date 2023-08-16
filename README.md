@@ -194,9 +194,11 @@ Soporte con dispositivos:
 
 ### Diagrama de Gantt
 
-  
 <img src="https://i.postimg.cc/5tn0WXwZ/Captura-de-pantalla-2023-08-16-104916.png"/>
 
+  &nbsp;
+  &nbsp;
+### Matriz de Responsabilidades
 
-
+<img src="https://i.postimg.cc/wTXFcz51/Captura-de-pantalla-2023-08-16-105242.png"/>
 
