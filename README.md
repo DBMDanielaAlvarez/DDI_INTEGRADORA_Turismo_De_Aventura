@@ -42,8 +42,7 @@
 ### Proposito
 Turismo de Aventura
 <p align="justify"> 
-Dicho documento cuenta con las especificaciones necesarias para el desarrollo del software “Turismo de Aventura” comprendiendo las siguientes partes del mismo.
-Roles de trabajo para los diferentes representantes, el alcance del mismo, los requerimientos funcionales y no funcionales, así como las funcionalidades del mismo sistema descritas por los requerimientos.</p>
+Desarrollar una aplicación para dispositivos Wear Os, basada en tecnologías actuales y escalables, con el fin de recomendar lugares turísticos de cada uno de los pueblos mágicos existentes en el estado de Puebla.</p>
 
 &nbsp;
 ### Alcance del producto / Software
@@ -53,7 +52,6 @@ Realización de una aplicación para Wear OS, implementada para la recomendació
 1. Da al usuario el o los lugares turísticos, en el cual el usuario se encuentre. 
 2. Describe el lugar turístico con la información mas relevante
 3. Se muestra una imagen de ayuda de referencia hacia el usuario. 
-4. Da la ubicación del lugar turístico para una mejor ayuda. 
 
 &nbsp;
 ### Funcionalidades del producto
@@ -194,9 +192,10 @@ Soporte con dispositivos:
  #### Interfaces de software
  Base de Datos
 
+### Diagrama de Gantt
 
   
-
+<img src="https://i.postimg.cc/5tn0WXwZ/Captura-de-pantalla-2023-08-16-104916.png"/>
 
 
 
