@@ -49,7 +49,7 @@ Desarrollar una aplicación para dispositivos Wear Os, basada en tecnologías ac
 <p align="justify"> 
 Realización de una aplicación para Wear OS, implementada para la recomendación de lugares turísticos en cada uno de los diferentes pueblos mágicos del estado de Puebla.</p>
 
-1. Da al usuario el o los lugares turísticos, en el cual el usuario se encuentre. 
+1. Da al usuario el o los lugares turísticos, en el cual, el usuario seleccione. 
 2. Describe el lugar turístico con la información mas relevante
 3. Se muestra una imagen de ayuda de referencia hacia el usuario. 
 
