@@ -14,7 +14,8 @@ from routes.pueblosMagicos import routerPmagico
 from routes.horarios import routerHorarios
 from routes.establecimientos import routerEstablecimiento
 from routes.criterio import routerCriterio
-from routes.join import appvista
+from routes.tview import viewsServer
+
 
 # Crear una instancia de FastAPI
 from fastapi.openapi.utils import get_openapi
@@ -36,11 +37,12 @@ app.include_router(routerCriterio)
 app.include_router(routerVatractivo)
 app.include_router(routerVestablecimiento)
 app.include_router(routerVpueblo)
-app.include_router(appvista)
+
 
 
 # Incluye las rutas y asigna una etiqueta a cada una
 app.include_router(router_SP_usuarios, tags=["sp_inseta"])
+app.include_router(viewsServer, tags=['VW Pueblos mágicos con más visitas'])
 app.include_router(routerPersonas, tags=["Personas"])
 app.include_router(routerAturistico, tags=["Atractivo Turístico"])
 app.include_router(routerComentarios, tags=["Comentarios"])
@@ -55,7 +57,7 @@ app.include_router(routerRoles, tags=["Roles"])
 app.include_router(routerHorarios, tags=["Horarios"])
 app.include_router(routerEstablecimiento, tags=["Establecimiento"])
 app.include_router(routerCriterio, tags=["Criterio"])
-app.include_router(appvista, tags=["Vista"])
+
 
 
 

@@ -1,4 +1,4 @@
-from fastapi import APIRouter
+'''from fastapi import APIRouter
 from config.db import conn
 from flask import Flask, jsonify
 from sqlalchemy import create_engine, select
@@ -38,4 +38,4 @@ def obtener_vista_lista_usuario():
     return jsonify(lista_registros)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True)'''

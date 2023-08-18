@@ -17,7 +17,7 @@ def obtenerPersonas():
             "Nombre": personas_tuple[1],
             "Primer_Apellido": personas_tuple[2],
             "Segundo_Apellido": personas_tuple[3],
-            "Genero": personas_tuple[4],  # Obtener el valor del miembro Enum correspondiente
+            "Genero": personas_tuple[4],  
             "Fecha_Nacimiento": personas_tuple[5],
             "Estatus": personas_tuple[6],
             "Fecha_Registro": personas_tuple[7]
@@ -28,12 +28,12 @@ def obtenerPersonas():
 # Ruta para crear una nueva persona
 @routerPersonas.post('/personas/insert')
 def insertPersonas(persona: Persona):
-    genero_enum = GeneroEnum(persona.Genero)  # Convertir la cadena al miembro Enum correspondiente
+    genero_enum = GeneroEnum(persona.Genero)  
     conn.execute(db_turismo_de_aventura.insert().values(
         Nombre=persona.Nombre,
         Primer_Apellido=persona.Primer_Apellido,
         Segundo_Apellido=persona.Segundo_Apellido,
-        Genero=genero_enum,  # Utilizar el miembro Enum correspondiente
+        Genero=genero_enum,  
         Fecha_Nacimiento=persona.Fecha_Nacimiento,
         Fecha_Registro=datetime.now()
     ))
